@@ -4,7 +4,7 @@ function gcdFn(a: number, b: number): number { return b === 0 ? a : gcdFn(b, a %
 
 function generateQuestions(): GameQuestion[] {
   const qs: GameQuestion[] = []
-  for (let i = 0; i < 15; i++) {
+  for (let i = 0; i < 150; i++) {
     const n1 = Math.floor(Math.random() * 4) + 1
     const d1 = Math.floor(Math.random() * 4) + 2
     const n2 = Math.floor(Math.random() * 4) + 1
@@ -16,7 +16,7 @@ function generateQuestions(): GameQuestion[] {
     const sNum = resultNum / gcd
     const sDen = resultDen / gcd
 
-    const type = i < 4 ? 'visual' : (i < 9 ? 'word' : 'formula')
+    const type = i < 30 ? 'visual' : (i < 80 ? 'word' : 'formula')
 
     if (type === 'visual') {
       const foods = ['🍰', '', '🍫', '', '']
@@ -122,7 +122,7 @@ export default function FractionDivideGame() {
       subtitle="六年级上册 · 第三单元 · 分数除法"
       knowledgeCard={knowledgeCard}
       rules={[
-        '🍕 共 15 道题，分三个难度递增',
+        '🍕 共 150 道题，分三个难度递增',
         ' 前三题有图形提示，帮助理解',
         '⚡ 连续答对3题有惊喜动画！',
         '📝 输入分数格式如：2/3 或 1',

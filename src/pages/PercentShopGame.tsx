@@ -2,8 +2,8 @@ import GameEngine, { GameQuestion } from '@/components/GameEngine'
 
 function generateQuestions(): GameQuestion[] {
   const qs: GameQuestion[] = []
-  for (let i = 0; i < 15; i++) {
-    const type = i < 5 ? 'discount' : (i < 10 ? 'tax' : 'interest')
+  for (let i = 0; i < 150; i++) {
+    const type = i < 50 ? 'discount' : (i < 100 ? 'tax' : 'interest')
 
     if (type === 'discount') {
       const originalPrice = Math.floor(Math.random() * 800) + 200
@@ -82,7 +82,7 @@ export default function PercentShopGame() {
       subtitle="六年级上册第六单元 · 下册第二单元 · 百分数"
       knowledgeCard={knowledgeCard}
       rules={[
-        '🛒 共 15 道题，包含打折、纳税、利息',
+        '🛒 共 150 道题，包含打折、纳税、利息',
         ' 打八折 = 原价的80%，打七五折 = 75%',
         '⚡ 连续答对3题有惊喜动画！',
         '💰 答案如果是小数，保留两位',

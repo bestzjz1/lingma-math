@@ -2,8 +2,8 @@ import GameEngine, { GameQuestion } from '@/components/GameEngine'
 
 function generateQuestions(): GameQuestion[] {
   const qs: GameQuestion[] = []
-  for (let i = 0; i < 15; i++) {
-    const type = i < 5 ? 'circumference' : (i < 10 ? 'area' : 'mixed')
+  for (let i = 0; i < 150; i++) {
+    const type = i < 50 ? 'circumference' : (i < 100 ? 'area' : 'mixed')
     const PI = 3.14
 
     if (type === 'circumference') {
@@ -124,7 +124,7 @@ export default function CircleLabGame() {
       subtitle="六年级上册 · 第五单元 · 圆"
       knowledgeCard={knowledgeCard}
       rules={[
-        '📐 共 15 道题，包含周长、面积和综合应用',
+        '📐 共 150 道题，包含周长、面积和综合应用',
         ' π取3.14进行计算',
         '⚡ 连续答对3题有惊喜动画！',
         '📝 结果保留两位小数（如有）',

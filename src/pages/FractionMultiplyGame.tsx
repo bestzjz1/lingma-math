@@ -28,9 +28,9 @@ export default function FractionMultiplyGame() {
   const generateQuestions = (): Question[] => {
     const qs: Question[] = []
     
-    // Generate 15 questions with more variety
-    for (let i = 0; i < 15; i++) {
-      const type = i < 4 ? 'visual' : (i < 9 ? 'word' : 'formula')
+    // Generate 150 questions with more variety
+    for (let i = 0; i < 150; i++) {
+      const type = i < 30 ? 'visual' : (i < 80 ? 'word' : 'formula')
       
       if (type === 'visual') {
         const n1 = Math.floor(Math.random() * 4) + 1
@@ -288,7 +288,7 @@ export default function FractionMultiplyGame() {
           <div className="bg-white rounded-2xl p-6 shadow-lg border border-gray-100 mb-6">
             <h3 className="font-bold text-gray-800 mb-3">🎮 游戏规则</h3>
             <ul className="space-y-2 text-gray-600 text-sm">
-              <li>🍰 共 15 道题，分三个难度递增</li>
+              <li>🍰 共 150 道题，分三个难度递增</li>
               <li>🎯 前三题有图形提示，帮助你理解</li>
               <li>⚡ 连续答对3题有惊喜动画！</li>
               <li>📝 输入分数格式如：2/3 或 1</li>

@@ -2,8 +2,8 @@ import GameEngine, { GameQuestion } from '@/components/GameEngine'
 
 function generateQuestions(): GameQuestion[] {
   const qs: GameQuestion[] = []
-  for (let i = 0; i < 15; i++) {
-    const type = i < 5 ? 'temperature' : (i < 10 ? 'depth' : 'compare')
+  for (let i = 0; i < 150; i++) {
+    const type = i < 50 ? 'temperature' : (i < 100 ? 'depth' : 'compare')
 
     if (type === 'temperature') {
       const temp = Math.floor(Math.random() * 15) + 1
@@ -145,7 +145,7 @@ export default function NegativeNumberGame() {
       subtitle="六年级下册 · 第一单元 · 负数"
       knowledgeCard={knowledgeCard}
       rules={[
-        '🌡️ 共 15 道题，包含温度、海拔、计算',
+        '🌡️ 共 150 道题，包含温度、海拔、计算',
         '📝 负数用 - 号表示，如 -5',
         '⚡ 连续答对3题有惊喜动画！',
         '🌊 海拔：海平面以上为正，以下为负',

@@ -4,8 +4,8 @@ function gcdFn(a: number, b: number): number { return b === 0 ? a : gcdFn(b, a %
 
 function generateQuestions(): GameQuestion[] {
   const qs: GameQuestion[] = []
-  for (let i = 0; i < 15; i++) {
-    const type = i < 4 ? 'ratio-simplify' : (i < 9 ? 'ratio-solve' : 'proportion')
+  for (let i = 0; i < 150; i++) {
+    const type = i < 40 ? 'ratio-simplify' : (i < 90 ? 'ratio-solve' : 'proportion')
 
     if (type === 'ratio-simplify') {
       const common = Math.floor(Math.random() * 5) + 2
@@ -163,7 +163,7 @@ export default function RatioGame() {
       subtitle="六年级下册 · 第四单元 · 比例"
       knowledgeCard={knowledgeCard}
       rules={[
-        '⚖️ 共 15 道题，包含化简比、按比例分配、正比例、反比例',
+        '⚖️ 共 150 道题，包含化简比、按比例分配、正比例、反比例',
         '📝 填最简比如 3:4',
         '⚡ 连续答对3题有惊喜动画！',
         '📝 结果保留两位小数（如有）',

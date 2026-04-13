@@ -4,8 +4,8 @@ function generateQuestions(): GameQuestion[] {
   const qs: GameQuestion[] = []
   const PI = 3.14
 
-  for (let i = 0; i < 15; i++) {
-    const type = i < 5 ? 'cylinder-surface' : (i < 10 ? 'cylinder-volume' : 'cone')
+  for (let i = 0; i < 150; i++) {
+    const type = i < 50 ? 'cylinder-surface' : (i < 100 ? 'cylinder-volume' : 'cone')
 
     if (type === 'cylinder-surface') {
       const r = Math.floor(Math.random() * 5) + 1
@@ -103,7 +103,7 @@ export default function CylinderGame() {
       subtitle="六年级下册 · 第三单元 · 圆柱与圆锥"
       knowledgeCard={knowledgeCard}
       rules={[
-        '🏗️ 共 15 道题，包含圆柱表面积、圆柱体积、圆锥体积',
+        '🏗️ 共 150 道题，包含圆柱表面积、圆柱体积、圆锥体积',
         ' π取3.14进行计算',
         '⚡ 连续答对3题有惊喜动画！',
         '📝 结果保留两位小数（如有）',
